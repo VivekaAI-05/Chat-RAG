@@ -2,6 +2,7 @@ streamlit
 langchain
 langchain-community
 langchain-huggingface
+langchain-text-splitter
 faiss-cpu
 sentence-transformers
 pypdf
