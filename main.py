@@ -25,7 +25,7 @@ client = OpenAI(
 
 # ─── Page setup ───────────────────────────────────────────────────────────────
 st.set_page_config(page_title="PDF Chatbot", page_icon="📄")
-st.title("📄 PDF Chatbot (Free)")
+st.title("📄 PDF Chatbot Using RAG ")
 
 # ─── Session state init ───────────────────────────────────────────────────────
 if "vectorstore" not in st.session_state:
@@ -58,7 +58,7 @@ if uploaded_file and st.session_state.vectorstore is None:
         )
         st.session_state.vectorstore = FAISS.from_documents(docs, embeddings)
 
-    st.success("✅ PDF processed successfully,Ask questions about it.")
+    st.success("✅ PDF processed successfully , Ask questions about it.")
 
 # ─── Chat ─────────────────────────────────────────────────────────────────────
 if st.session_state.vectorstore is not None:
